@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creator = "@zeeoneofc"
+var creator = "@hiruwa"
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
@@ -3218,7 +3218,7 @@ router.get('/yutub/video', async (req, res, next) => {
             url = req.query.url
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'hiruwa') return res.json(loghandler.invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
@@ -3226,7 +3226,7 @@ router.get('/yutub/video', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'hiruwa',
                  result
              })
          })
@@ -3241,7 +3241,7 @@ router.get('/yutub/audio', async (req, res, next) => {
             url = req.query.url
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'hiruwa') return res.json(loghandler.invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/yta?url=${url}`))
@@ -3249,7 +3249,7 @@ router.get('/yutub/audio', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'hiruwa',
                  result
              })
          })
